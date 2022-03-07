@@ -6,7 +6,7 @@ Shop iteams in database for retailer.
 1. Node.JS (Installed) --> https://nodejs.org/en/
 2. MongoDb (Database) (Installed) --> https://www.mongodb.com/try/download/community
 
-//------------------------------------------------//
+🐶------------------------------------------------🐶
 
 🚦 Steps:
 1. Please check  pre-requirements and complete it.
