@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap');
+
+        * {
+            font-family: 'Nunito', sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+
+        .h1_font {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            margin: 20px 0px;
+        }
+
+        .fontt {
+            display: flex;
+            width: 80%;
+            height: auto;
+
+            align-content: center;
+            justify-content: center;
+        }
+
+        h1 {
+            color: rgb(0, 237, 100);
+            font-weight: 300;
+        }
+
+        .main {
+            display: flex;
+            width: 100%;
+            height: auto;
+            flex-direction: column;
+        }
+
+        .outer {
+            display: flex;
+            flex-direction: row;
+            width: 80%;
+            height: 100px;
+            margin: 0px auto;
+            /* background-color: aqua; */
+        }
+
+        .outer_main {
+            display: flex;
+            flex-direction: row;
+            width: 80%;
+            height: 100px;
+            margin: 0px auto 20px auto;
+            /* background-color: aqua; */
+        }
+
+        .outer:hover {
+            border: 1px dashed rgb(255, 0, 106);
+        }
+
+        .line {
+            border: 1px solid rgb(0, 237, 100);
+            width: 50%;
+            background-color: rgba(0, 237, 99, 0.034);
+            border-radius: 10px;
+            color: white;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .line_top {
+            width: 50%;
+            background-color: rgb(108, 233, 117);
+            border-radius: 10px;
+            color: black;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: rgba(108, 233, 117, 0.25) 0px 0px 55px, rgba(108, 233, 117, 0.12) 0px -12px 30px, rgba(107, 233, 117, 0.12) 0px 4px 6px, rgba(108, 233, 117, 0.17) 0px 12px 13px, rgba(108, 233, 117, 0.09) 0px -3px 5px;
+        }
+
+        .line:hover {
+            background-color: rgba(0, 237, 99, 0.5);
+            transition: 0.3s;
+        }
+
+        .outer_main>.line {
+            width: 100%;
+            height: auto;
+            background-color: #006CFA;
+            border: none;
+            transition: 0.3s;
+        }
+
+        .outer_main>.line:hover {
+            transform: scale(1.05);
+            font-size: larger;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .outer>.line:last-child {
+            background-color: white;
+            color: black;
+            border: none;
+        }
+
+        .outer>.line:last-child:hover {
+            transition: 0.15s;
+            background-color: rgba(19, 51, 48);
+            color: white;
+            cursor: pointer;
+        }
+
+        #aa {
+            background-color: white;
+            color: black;
+            border-radius: 10px;
+            width: 50%;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #aa:hover {
+            transition: 0.15s;
+            background-color: rgba(19, 51, 48);
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body style="background-color:rgb(6, 22, 33)">
+    <div class="h1_font">
+        <div class="fontt">
+            <h1>Product details</h1>
+        </div>
+    </div>
+    <div class="main">
+        <a href="http://localhost:3000/add/">
+            <div class="outer_main">
+                <div class="line">Add Iteam</div>
+            </div>
+        </a>
+        <div class="outer">
+            <div class="line_top">
+                <span>
+                    Name
+                </span>
+            </div>
+            <div class="line_top">
+                <span>
+                    Price
+                </span>
+            </div>
+            <div class="line_top">
+                <span>
+                    On Sale
+                </span>
+            </div>
+            <div class="line_top">
+                <span>Details</span>
+            </div>
+        </div>
+        <!--TODO: iteam add  -->
+        <% for(let i=0;i < products.length;i++){ %>
+            <div class="outer">
+                <div class="line">
+                    <span>
+                        <%= products[i].name %>
+                    </span>
+                </div>
+                <div class="line">
+                    <span>
+                        <%= products[i].price %>
+                    </span>
+                </div>
+                <div class="line">
+                    <span>
+                        <%= products[i].onSale %>
+                    </span>
+                </div>
+                <a id="aa" href="http://localhost:3000/product/<%= products[i]._id %>">
+                    <div>
+                        <span>Details</span>
+                    </div>
+                </a>
+            </div>
+            <% } %>
+    </div>
+</body>
+
+</html>

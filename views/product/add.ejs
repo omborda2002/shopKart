@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Products ADD</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap');
+
+
+        * {
+            font-family: 'Nunito', sans-serif;
+            color: white;
+            margin: 3px;
+        }
+
+        h1,
+        div {
+            margin: 20px 0px;
+        }
+
+        button {
+            color: black;
+        }
+
+        input {
+            background: transparent;
+            border: none;
+            margin-left: 5px;
+            border-bottom: 2px solid rgb(108, 233, 117);
+        }
+
+        select {
+            background: transparent;
+            border: none;
+            margin-left: 5px;
+            border-bottom: 2px solid rgb(40, 189, 50);
+        }
+
+        input:focus {
+            outline: none;
+            color: yellow;
+        }
+
+        button {
+            color: black;
+            background-color: rgb(108, 233, 117);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+        }
+
+        .main {
+            display: flex;
+            width: 100%;
+            height: auto;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body style="background-color: rgb(19, 51, 38);">
+    <div class="main">
+
+        <h1>ADD NEW PRODUCTS</h1>
+        <form action="http://localhost:3000/add/" method="post">
+            <div class="name_form">
+                <label for="name">Name of Product</label>
+                <input type="text" name="name" id="name" placeholder="enter a product name">
+            </div>
+            <div class="price_from">
+                <label for="price">Price</label>
+                <input type="number" name="price" id="price" placeholder="enter price ">
+            </div>
+            <div class="onSale_from">
+                <label for="onSale">On Sale</label>
+                <select name="onSale" id="onSale">
+                    <option value="true">True</option>
+                    <option value="false" selected>False</option>
+                </select>
+            </div>
+            <div class="submit_from">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

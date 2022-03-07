@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap');
+
+
+        * {
+            font-family: 'Nunito', sans-serif;
+            color: white;
+            margin: 3px;
+        }
+
+        .main {
+            width: 100%;
+            height: auto;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: left;
+
+        }
+        input:focus {
+            outline: none;
+            color: yellow;
+        }
+        input {
+            background: transparent;
+            border: none;
+            margin-left: 5px;
+            border-bottom: 2px solid rgb(108, 233, 117);
+        }
+        select {
+            background: transparent;
+            border: none;
+            margin-left: 5px;
+            border-bottom: 2px solid rgb(40, 189, 50);
+        }
+        button {
+            color: black;
+            background-color: rgb(108, 233, 117);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+        }
+        h1,
+        div {
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body style="background-color: rgb(19, 51, 38);">
+    <div class="main">
+        <h1>Update form</h1>
+        <form action="http://localhost:3000/product/update/<%= products._id%>?_method=PUT" method="POST">
+            <div class="name_form">
+                <label for="name">Name of Product</label>
+                <input type="text" name="name" id="name" value="<%= products.name %> ">
+            </div>
+            <div class="price_from">
+                <label for="price">Price</label>
+                <input type="number" name="price" id="price" value="<%=products.price%>">
+            </div>
+            <div class="onSale_from">
+                <label for="onSale">On Sale</label>
+                <select name="onSale" id="onSale">
+                    <% if(products.onSale==true){%>
+
+                        <option value="true" selected>True</option>
+                        <%} else{ %>
+                            <option value="true">True</option>
+                            <% } %>
+                                <% if(products.onSale==false){%>
+
+                                    <option value="false" selected>False</option>
+                                    <%}else{ %>
+                                        <option value="false">false</option>
+                                        <% } %>
+                </select>
+            </div>
+            <div class="submit_from">
+                <button type="submit">Update</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

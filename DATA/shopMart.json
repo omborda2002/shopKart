@@ -1,0 +1,25 @@
+[{
+  "_id": {
+    "$oid": "6226471e14d698f94f6acd07"
+  },
+  "name": "Chocolate",
+  "price": 10,
+  "onSale": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6226475414d698f94f6acd0a"
+  },
+  "name": "Nachos",
+  "price": 30,
+  "onSale": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6226479d14d698f94f6acd0d"
+  },
+  "name": "Cookies",
+  "price": 25,
+  "onSale": false,
+  "__v": 0
+}]
