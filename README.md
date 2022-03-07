@@ -3,10 +3,12 @@ Shop iteams in database for retailer.
 
 
 ✅ Pre-Requirements:
-Node.JS (Installed) --> https://nodejs.org/en/
-MongoDb (Database) (Installed) --> https://www.mongodb.com/try/download/community
+1. Node.JS (Installed) --> https://nodejs.org/en/
+2. MongoDb (Database) (Installed) --> https://www.mongodb.com/try/download/community
 
-🚦 Steps 🚦
+//------------------------------------------------//
+
+🚦 Steps:
 1. Please check  pre-requirements and complete it.
 2. Follow Commands (Terminal in open cloned folder):
    npm install
