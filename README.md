@@ -11,8 +11,8 @@ Shop iteams in database for retailer.
 🚦 Steps:
 1. Please check  pre-requirements and complete it.
 2. Follow Commands (Terminal in open cloned folder):
-   npm install
-   node index.js
+   1. npm install
+   2. node index.js
 3. Your browser in open 🍿 --> http://localhost:3000/
 4. And Done 😘
 
