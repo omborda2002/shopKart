@@ -22,7 +22,7 @@ app.use(methodOverride("_method"));
 //------------------------------------------------------------------
 //Connect mongoDB
 mongoose
-  .connect("mongodb://localhost:27017/shopMart")
+  .connect("mongodb://127.0.0.1:27017/shopMart")
   .then(() => {
     console.log("CONNECTION OPENED ✅");
   })
@@ -32,8 +32,12 @@ mongoose
 
 //TODO: ROUTS:
 app.get("/", async (req, res) => {
-  let products = await Product.find({});
-  res.render("product/products", { products });
+  try {
+    let products = await Product.find({});
+    res.render("product/products", { products });
+  } catch (error) {
+    console.log("Products", error);
+  }
 });
 
 app.get("/add", (req, res) => {
